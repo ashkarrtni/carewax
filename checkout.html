@@ -279,11 +279,11 @@ class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-5
         margin-bottom: 15px;
     }
     .proceed_section{
-     display: flex;
-     flex-direction: column;
-     gap:10px;
- }
- .proceed_section span{
+       display: flex;
+       flex-direction: column;
+       gap:10px;
+   }
+   .proceed_section span{
     text-align: center;
     font-weight: 400;
     font-size: 12px;
@@ -562,23 +562,51 @@ class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-5
     </tr>
 </tbody>
 </table>
+
+
 <!-- 
 <div class="giftOptions">
   <h3>Gift options</h3>
   <p>Pick a paper of your choice (optional)</p>
   <label><input type="checkbox"> Gift Receipt</label>
   <label><input type="checkbox"> Printed card</label>
-</div>
+</div> -->
 
-<div class="giftCardsWrapper">
-  <h3>Gift Cards</h3>
+<!-- <div class="giftCardsWrapper"> -->
+  <h3>Login</h3>
   <div class="giftCards">
-    <input type="text" placeholder="Enter the gift card code">
-    <button>ADD GIFT CARD</button>
+    <input type="text" placeholder="10-digit mobile number">
+    <input type="password" placeholder="Enter password">
+    <button>Submit</button>
 </div>
+<!-- </div> -->
+
+
+
+<h3>New Register</h3>
+<div class="giftCards">
+    <input type="text" placeholder="Enter Name">
+</div>
+<div class="giftCards">
+    <input type="email" placeholder="Enter email">
+</div>
+<div class="giftCards">
+    <input type="text" placeholder="10-digit mobile number">
 </div>
 
-<div class="discountCodeWrapper">
+<div class="giftCards">
+    <input type="password" placeholder="Enter password">
+    <button>Submit</button>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="discountCodeWrapper">
   <h3>Apply Discount Code</h3>
   <div class="discountCode">
     <input type="text" placeholder="Enter discount code">
@@ -588,8 +616,8 @@ class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-5
 
 
 <div class="row g-3" id="address-list">
-   <!-- Example Address Card -->
-   <div class="col-md-4">
+ <!-- Example Address Card -->
+ <div class="col-md-4">
     <div class="card address-card p-3" data-address-id="1">
       <div class="d-flex justify-content-between align-items-start mb-2">
         <h5 class="card-title mb-0">Home Address</h5>
@@ -644,7 +672,24 @@ class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-5
       <p>Shipping <span>$5.00</span></p>
       <p class="total">Order Total <span>$7,605.00</span></p>
   </div>
-  <div class="proceed_section">
+
+
+  <div class="totalPrice">
+    <div class="payment">
+      <h3 class="text-capitalize fs-new fw-semibold"></h3>
+      <div class="d-flex gap-2 mt-4">
+        <p><input type='radio' name="payment" value="online"/>
+            <label for="credit-debit ">  Online Payment</label></p>
+        </div>
+
+        <div class="d-flex gap-2 mt-4">
+            <p><input type='radio' name="payment" value="cod" checked/>
+                <label for="cod">  Cash on Delivery</label></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="proceed_section">
       <button>PROCEED TO CHECKOUT</button>
       <!-- <span>Check Out with Multiple Addresses</span> -->
   </div>
@@ -671,28 +716,28 @@ class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-5
               <input type="text" class="form-control" id="fullName" required>
           </div>
           <div class="mb-3">
-              <label for="streetAddress" class="form-label">Street Address</label>
+              <label for="streetAddress" class="form-label"> Address</label>
               <input type="text" class="form-control" id="streetAddress" required>
           </div>
           <div class="mb-3">
               <label for="city" class="form-label">City</label>
               <input type="text" class="form-control" id="city" required>
           </div>
-           <div class="mb-3">
+          <div class="mb-3">
               <label for="state" class="form-label">State</label>
               <input type="text" class="form-control" id="state" required>
           </div>
-        <div class="mb-3">
-          <label for="zip" class="form-label">Pin Code</label>
-          <input type="text" class="form-control" id="zip" required>
-      </div>
-      <div class="mb-3">
-          <label for="phone" class="form-label">Phone Number</label>
-          <input type="tel" class="form-control" id="phone" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Save Address</button>
-  </form>
-</div>
+          <div class="mb-3">
+              <label for="zip" class="form-label">Pin Code</label>
+              <input type="text" class="form-control" id="zip" required>
+          </div>
+          <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Address</button>
+      </form>
+  </div>
 </div>
 </div>
 </div>
@@ -786,7 +831,7 @@ class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-5
 });
 </script>
 
- -->
+-->
 
 
 
