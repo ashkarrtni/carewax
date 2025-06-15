@@ -104,6 +104,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
@@ -112,8 +121,8 @@
     padding: 20px 0;
     display: flex;
     justify-content: center;
-  }
-  .swiper-slide {
+}
+.swiper-slide {
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
@@ -123,36 +132,72 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .video-wrapper {
+}
+
+.swiper-slide {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.video-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
-  }
-  video {
+}
+video {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Cover to fill the container nicely */
     border-radius: 8px;
-  }
-  /* Overlay buttons container */
-  .video-controls {
+}
+/* Overlay buttons container */
+.video-controls {
     position: absolute;
     top: 8px;
     right: 8px;
     display: flex;
     gap: 8px;
     z-index: 10;
-  }
-  /* Style buttons */
-  .video-controls button {
+}
+/* Style buttons */
+.video-controls button {
     background: rgba(255,255,255,0.8);
     border: none;
     border-radius: 50%;
     padding: 4px 8px;
     cursor: pointer;
     font-size: 14px;
-  }
+}
+
+
+<style>
+/* Container for each slide */
+
+/* Make video container aspect ratio 9:16 for reels */
+.video-container {
+    width: 100%;
+    max-width: 150px; /* Optional max width for reel size */
+    aspect-ratio: 9 / 16; /* Modern property for maintaining aspect ratio */
+    position: relative;
+}
+/* Style the video to fill container responsively */
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fill container while maintaining aspect ratio */
+    border-radius: 8px;
+}
+</style>
+
+
 </style>
 
 <div class="container-fluid py-3">
@@ -164,82 +209,82 @@
         <div class="video-wrapper">
           <video muted loop playsinline>
             <source src="https://cdn.coverr.co/videos/coverr-blueberries-and-strawberries-8320/720p.mp4" type="video/mp4" />
-          </video>
-          <div class="video-controls">
+        </video>
+        <div class="video-controls">
             <button class="play-btn">▶️</button>
             <button class="fullscreen-btn">⛶</button>
-          </div>
         </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="video-wrapper">
-          <video muted loop playsinline>
-            <source src="https://cdn.coverr.co/videos/coverr-blueberries-and-strawberries-8320/720p.mp4" type="video/mp4" />
-          </video>
-          <div class="video-controls">
-            <button class="play-btn">▶️</button>
-            <button class="fullscreen-btn">⛶</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="video-wrapper">
-          <video muted loop playsinline>
-            <source src="https://cdn.coverr.co/videos/coverr-blueberries-and-strawberries-8320/720p.mp4" type="video/mp4" />
-          </video>
-          <div class="video-controls">
-            <button class="play-btn">▶️</button>
-            <button class="fullscreen-btn">⛶</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="video-wrapper">
-          <video muted loop playsinline>
-            <source src="https://cdn.coverr.co/videos/coverr-blueberries-and-strawberries-8320/720p.mp4" type="video/mp4" />
-          </video>
-          <div class="video-controls">
-            <button class="play-btn">▶️</button>
-            <button class="fullscreen-btn">⛶</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="video-wrapper">
-          <video muted loop playsinline>
-            <source src="https://cdn.coverr.co/videos/coverr-blueberries-and-strawberries-8320/720p.mp4" type="video/mp4" />
-          </video>
-          <div class="video-controls">
-            <button class="play-btn">▶️</button>
-            <button class="fullscreen-btn">⛶</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Repeat for more videos -->
-      <div class="swiper-slide">
-        <div class="video-wrapper">
-          <video muted loop playsinline>
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
-          </video>
-          <div class="video-controls">
-            <button class="play-btn">▶️</button>
-            <button class="fullscreen-btn">⛶</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Add more slides as needed -->
-      
     </div>
-    <!-- Optional navigation buttons -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
+</div>
+
+<div class="swiper-slide">
+    <div class="video-wrapper">
+      <video muted loop playsinline>
+        <source src="https://cdn.coverr.co/videos/coverr-blueberries-and-strawberries-8320/720p.mp4" type="video/mp4" />
+    </video>
+    <div class="video-controls">
+        <button class="play-btn">▶️</button>
+        <button class="fullscreen-btn">⛶</button>
+    </div>
+</div>
+</div>
+
+<div class="swiper-slide">
+    <div class="video-wrapper">
+      <video muted loop playsinline>
+        <source src="https://cdn.coverr.co/videos/coverr-blueberries-and-strawberries-8320/720p.mp4" type="video/mp4" />
+    </video>
+    <div class="video-controls">
+        <button class="play-btn">▶️</button>
+        <button class="fullscreen-btn">⛶</button>
+    </div>
+</div>
+</div>
+
+<div class="swiper-slide">
+    <div class="video-wrapper">
+      <video muted loop playsinline>
+        <source src="https://cdn.coverr.co/videos/coverr-blueberries-and-strawberries-8320/720p.mp4" type="video/mp4" />
+    </video>
+    <div class="video-controls">
+        <button class="play-btn">▶️</button>
+        <button class="fullscreen-btn">⛶</button>
+    </div>
+</div>
+</div>
+
+<div class="swiper-slide">
+    <div class="video-wrapper">
+      <video muted loop playsinline>
+        <source src="https://cdn.coverr.co/videos/coverr-blueberries-and-strawberries-8320/720p.mp4" type="video/mp4" />
+    </video>
+    <div class="video-controls">
+        <button class="play-btn">▶️</button>
+        <button class="fullscreen-btn">⛶</button>
+    </div>
+</div>
+</div>
+
+<!-- Repeat for more videos -->
+<div class="swiper-slide">
+    <div class="video-wrapper">
+      <video muted loop playsinline>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+    </video>
+    <div class="video-controls">
+        <button class="play-btn">▶️</button>
+        <button class="fullscreen-btn">⛶</button>
+    </div>
+</div>
+</div>
+
+<!-- Add more slides as needed -->
+
+</div>
+<!-- Optional navigation buttons -->
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+</div>
 </div>
 
 <!-- Swiper JS -->
@@ -252,13 +297,15 @@
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      0: { slidesPerView: 2 },
-      768: { slidesPerView: 3 },
-      992: { slidesPerView: 5 },
-    }
-  });
+  },
+  breakpoints: {
+      0: { slidesPerView: 1 },      
+        576: { slidesPerView: 1 },      
+        768: { slidesPerView: 1 },       
+        992: { slidesPerView: 4 },       
+        1200: { slidesPerView: 6 }, 
+  }
+});
 
   // Play/Pause functionality
   document.querySelectorAll('.play-btn').forEach(btn => {
@@ -267,12 +314,12 @@
       if (video.paused) {
         video.play();
         btn.textContent = '⏸️';
-      } else {
+    } else {
         video.pause();
         btn.textContent = '▶️';
-      }
-    });
-  });
+    }
+});
+});
 
   // Fullscreen functionality
   document.querySelectorAll('.fullscreen-btn').forEach(btn => {
@@ -280,25 +327,14 @@
       const video = btn.closest('.video-wrapper').querySelector('video');
       if (video.requestFullscreen) {
         video.requestFullscreen();
-      } else if (video.webkitRequestFullscreen) {
+    } else if (video.webkitRequestFullscreen) {
         video.webkitRequestFullscreen();
-      } else if (video.msRequestFullscreen) {
+    } else if (video.msRequestFullscreen) {
         video.msRequestFullscreen();
-      }
-    });
-  });
+    }
+});
+});
 </script>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
